@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bExit = new System.Windows.Forms.Button();
             this.bVerbSummary = new System.Windows.Forms.Button();
+            this.bVerbDetail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +71,24 @@
             this.bVerbSummary.UseVisualStyleBackColor = true;
             this.bVerbSummary.Click += new System.EventHandler(this.bVerbSummary_Click);
             // 
+            // bVerbDetail
+            // 
+            this.bVerbDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bVerbDetail.Location = new System.Drawing.Point(12, 117);
+            this.bVerbDetail.Name = "bVerbDetail";
+            this.bVerbDetail.Size = new System.Drawing.Size(880, 99);
+            this.bVerbDetail.TabIndex = 3;
+            this.bVerbDetail.Text = "Verb Detail";
+            this.bVerbDetail.UseVisualStyleBackColor = true;
+            this.bVerbDetail.Click += new System.EventHandler(this.bVerbDetail_Click);
+            // 
             // Startup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1351, 807);
+            this.Controls.Add(this.bVerbDetail);
             this.Controls.Add(this.bVerbSummary);
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.pictureBox1);
@@ -91,5 +105,6 @@
         private PictureBox pictureBox1;
         private Button bExit;
         private Button bVerbSummary;
+        private Button bVerbDetail;
     }
 }

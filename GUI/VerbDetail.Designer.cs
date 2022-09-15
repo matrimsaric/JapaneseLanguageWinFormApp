@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // VerbDetail
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "VerbDetail";
+            this.ClientSize = new System.Drawing.Size(1442, 972);
+            this.Name = "VerbDetail";
+            this.Text = "     ";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

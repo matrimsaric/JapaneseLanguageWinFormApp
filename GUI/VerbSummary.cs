@@ -1,6 +1,7 @@
 ﻿using LanguageConsult.DataAccess;
 using LanguageConsult.DataAccess.MSSqlDataAccess;
 using LanguageConsult.Verbs;
+using LanguageConsult.Verbs.InflectionControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,10 @@ namespace JapaneseLanguageWinForm.GUI
 
             DataAccessProvider prov = new DataAccessProvider();
             dataAccessLayer = prov.GetLiveDataAccess();
+            lbInflections.DrawMode = DrawMode.OwnerDrawFixed;
+            lbInflections.DrawItem += new DrawItemEventHandler(lbDrawInflection);
+            lbTenses.DrawMode = DrawMode.OwnerDrawFixed;
+            lbTenses.DrawItem += new DrawItemEventHandler(lbDrawTense);
         }
 
         private void bCancel_Click(object sender, EventArgs e)
@@ -74,9 +79,19 @@ namespace JapaneseLanguageWinForm.GUI
                 }
 
 
-                // TODO load inflections
+                // inflections are based off of class structure
+                foreach(Inflection newInfl in controlVerb.inflections)
+                {
+                    lbInflections.Items.Add(newInfl);
 
-                    // TODO load tenses
+                    // each inflection will have its own group of tenses so load those
+                    foreach(Tense tense in newInfl.Tenses)
+                    {
+                        lbTenses.Items.Add(tense);
+                    }
+                }
+
+                    
             }
             else
             {
@@ -141,6 +156,59 @@ namespace JapaneseLanguageWinForm.GUI
                 ClearAll();
                 
             }
+           
+            
+
+        }
+
+        private void lbDrawInflection(object sender, DrawItemEventArgs e) {
+
+            e.DrawBackground();
+
+            Brush standardBrush = Brushes.Black;
+
+            object display = ((ListBox)sender).Items[e.Index];
+            Inflection disp = (Inflection)display;
+
+            if (!disp.IsValid())
+            {
+                standardBrush = Brushes.Red;
+            }
+
+            
+
+            e.Graphics.DrawString(disp.Name,
+                e.Font, standardBrush, e.Bounds, StringFormat.GenericDefault);
+
+            e.DrawFocusRectangle();
+        }
+
+        private void lbDrawTense(object sender, DrawItemEventArgs e)
+        {
+
+            e.DrawBackground();
+
+            Brush standardBrush = Brushes.Black;
+
+            object display = ((ListBox)sender).Items[e.Index];
+            Tense disp = (Tense)display;
+
+            if (!disp.IsValid())
+            {
+                standardBrush = Brushes.Red;
+            }
+
+
+
+            e.Graphics.DrawString(disp.ToString(), e.Font, standardBrush, e.Bounds, StringFormat.GenericDefault);
+
+            e.DrawFocusRectangle();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VerbDetail newDetailWindow = new VerbDetail(controlVerb);
+            newDetailWindow.ShowDialog(this);
             
         }
     }

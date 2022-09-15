@@ -24,5 +24,11 @@ namespace JapaneseLanguageWinForm
             VerbSummary newSummaryWindow = new VerbSummary();
             newSummaryWindow.ShowDialog(this);
         }
+
+        private void bVerbDetail_Click(object sender, EventArgs e)
+        {
+            VerbDetail newDetailWindow = new VerbDetail();
+            newDetailWindow.ShowDialog(this);
+        }
     }
 }

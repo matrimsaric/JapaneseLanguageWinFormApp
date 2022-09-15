@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageConsult.Verbs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,15 @@ namespace JapaneseLanguageWinForm.GUI
 {
     public partial class VerbDetail : Form
     {
+        private Verb liveVerb;
         public VerbDetail()
         {
+            InitializeComponent();
+        }
+
+        public VerbDetail(Verb verbToShow)
+        {
+            liveVerb = verbToShow;
             InitializeComponent();
         }
     }
