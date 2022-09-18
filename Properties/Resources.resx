@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ImageLibraryClassName" xml:space="preserve">
+    <value>ImageAccess</value>
+  </data>
+  <data name="ImageLibraryDllName" xml:space="preserve">
+    <value>KanjiLineMaps.dll</value>
+    <comment>Reflection accessed image library for kanji drawings</comment>
+  </data>
+  <data name="ImageLibraryDllShortName" xml:space="preserve">
+    <value>KanjiLineMaps</value>
+  </data>
+  <data name="ImageLibraryImageType" xml:space="preserve">
+    <value>.png</value>
+  </data>
+  <data name="ImageLibraryMethodName" xml:space="preserve">
+    <value>GetPNGImage</value>
+  </data>
 </root>

@@ -1,4 +1,5 @@
-﻿using LanguageConsult.DataAccess;
+﻿using JapaneseLanguageWinForm.DataLibaryAccess;
+using LanguageConsult.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,10 @@ namespace JapaneseLanguageWinForm.GUI
     
     public partial class VerbSearchDialogue : Form
     {
-        private DataAccess dataAccessLayer;
         public Guid chosenGuid;
-        public VerbSearchDialogue(DataAccess dataAccessLayerToUse)
+        public VerbSearchDialogue()
         {
             InitializeComponent();
-            this.dataAccessLayer = dataAccessLayerToUse;
 
             this.LoadAll();
         }
@@ -27,7 +26,7 @@ namespace JapaneseLanguageWinForm.GUI
         private void LoadAll()
         {
             // TODO Add restrictions on verb type/ search/ validity to call both ends..
-            Task<DataTable> verbsToUse = dataAccessLayer.LoadAllVerbs();
+            Task<DataTable> verbsToUse = DataControlSingleton.GetDataAccess().LoadAllVerbs();
 
             if(verbsToUse.Result != null)
             {

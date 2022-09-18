@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1442, 972);
+            this.ClientSize = new System.Drawing.Size(1095, 623);
             this.Name = "VerbDetail";
             this.Text = "     ";
             this.ResumeLayout(false);

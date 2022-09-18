@@ -1,3 +1,4 @@
+using JapaneseLanguageWinForm.DataLibaryAccess;
 using JapaneseLanguageWinForm.GUI;
 
 namespace JapaneseLanguageWinForm
@@ -7,8 +8,11 @@ namespace JapaneseLanguageWinForm
         public Startup()
         {
             InitializeComponent();
+
+            // ensure data access is generated
         }
 
+      
         private void bExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

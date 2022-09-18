@@ -59,5 +59,50 @@ namespace JapaneseLanguageWinForm.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ImageAccess.
+        /// </summary>
+        internal static string ImageLibraryClassName {
+            get {
+                return ResourceManager.GetString("ImageLibraryClassName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KanjiLineMaps.dll.
+        /// </summary>
+        internal static string ImageLibraryDllName {
+            get {
+                return ResourceManager.GetString("ImageLibraryDllName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KanjiLineMaps.
+        /// </summary>
+        internal static string ImageLibraryDllShortName {
+            get {
+                return ResourceManager.GetString("ImageLibraryDllShortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .png.
+        /// </summary>
+        internal static string ImageLibraryImageType {
+            get {
+                return ResourceManager.GetString("ImageLibraryImageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GetPNGImage.
+        /// </summary>
+        internal static string ImageLibraryMethodName {
+            get {
+                return ResourceManager.GetString("ImageLibraryMethodName", resourceCulture);
+            }
+        }
     }
 }

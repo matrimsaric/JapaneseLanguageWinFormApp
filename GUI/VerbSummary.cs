@@ -1,4 +1,5 @@
-﻿using LanguageConsult.DataAccess;
+﻿using JapaneseLanguageWinForm.DataLibaryAccess;
+using LanguageConsult.DataAccess;
 using LanguageConsult.DataAccess.MSSqlDataAccess;
 using LanguageConsult.Verbs;
 using LanguageConsult.Verbs.InflectionControl;
@@ -8,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,17 +21,47 @@ namespace JapaneseLanguageWinForm.GUI
     {
         private Verb controlVerb;
         private bool newVerb = true;
-        private DataAccess dataAccessLayer;
+        private Assembly imageAssembly = null;
+
         public VerbSummary()
         {
             InitializeComponent();
 
-            DataAccessProvider prov = new DataAccessProvider();
-            dataAccessLayer = prov.GetLiveDataAccess();
             lbInflections.DrawMode = DrawMode.OwnerDrawFixed;
             lbInflections.DrawItem += new DrawItemEventHandler(lbDrawInflection);
             lbTenses.DrawMode = DrawMode.OwnerDrawFixed;
             lbTenses.DrawItem += new DrawItemEventHandler(lbDrawTense);
+
+            LoadImageAssembly(JapaneseLanguageWinForm.Properties.Resources.ImageLibraryDllName);
+        }
+
+        private void LoadImageAssembly(string assemblyName)
+        {
+            llKanjiCharacter.Enabled = false;
+            llKanjiCharacter.ForeColor = Color.Black;
+            // TODO live path in test env is C:\ProgramData\JapaneseLanguageWinForm\JapaneseLanguageWinForm\1.0.0
+            // make this a resource as well
+            string livePath = $"{Application.CommonAppDataPath}{Path.DirectorySeparatorChar}{assemblyName}";
+
+            try
+            {
+                // search for our dll
+                var assembly = Assembly.LoadFile(livePath);
+
+                if(assembly != null)
+                {
+                    imageAssembly = assembly;
+                    llKanjiCharacter.Enabled = true;
+                    llKanjiCharacter.ForeColor = Color.Blue;
+                }
+            }
+            catch(System.BadImageFormatException ex)
+            {
+                // not an assembly..
+            }
+            
+
+
         }
 
         private void bCancel_Click(object sender, EventArgs e)
@@ -39,7 +71,7 @@ namespace JapaneseLanguageWinForm.GUI
 
         private void bLookup_Click(object sender, EventArgs e)
         {
-            VerbSearchDialogue searcher = new VerbSearchDialogue(dataAccessLayer);
+            VerbSearchDialogue searcher = new VerbSearchDialogue();
  
             DialogResult result = searcher.ShowDialog(this);
 
@@ -54,7 +86,9 @@ namespace JapaneseLanguageWinForm.GUI
 
         private void LoadVerb(Guid targetId)
         {
-            Task<Verb> loadedVerb = dataAccessLayer.LoadSpecificVerb(targetId);
+            Task<Verb> loadedVerb = DataControlSingleton.GetDataAccess().LoadSpecificVerb(targetId);
+            lbInflections.Items.Clear();
+            lbTenses.Items.Clear();
 
             if(loadedVerb.Result != null)
             {
@@ -84,11 +118,7 @@ namespace JapaneseLanguageWinForm.GUI
                 {
                     lbInflections.Items.Add(newInfl);
 
-                    // each inflection will have its own group of tenses so load those
-                    foreach(Tense tense in newInfl.Tenses)
-                    {
-                        lbTenses.Items.Add(tense);
-                    }
+                    
                 }
 
                     
@@ -145,13 +175,13 @@ namespace JapaneseLanguageWinForm.GUI
                 if (rbIchidan.Checked)
                 {
                     newCreation = new IchidanVerb(tbKanji.Text.Trim(), tbHiragana.Text.Trim(), tbRomaji.Text.Trim(), tbMeaning.Text.Trim(), Guid.NewGuid(), tbKanjiCharacter.Text.Trim(), false);
-                    dataAccessLayer.SaveVerb(newCreation);
+                    DataControlSingleton.GetDataAccess().SaveVerb(newCreation);
 
                 }
                 else if(rbGodan.Checked)
                 {
                     newCreation = new GodanVerb(tbKanji.Text.Trim(), tbHiragana.Text.Trim(), tbRomaji.Text.Trim(), tbMeaning.Text.Trim(), Guid.NewGuid(), tbKanjiCharacter.Text.Trim(), false);
-                    dataAccessLayer.SaveVerb(newCreation);
+                    DataControlSingleton.GetDataAccess().SaveVerb(newCreation);
                 }
                 ClearAll();
                 
@@ -209,6 +239,39 @@ namespace JapaneseLanguageWinForm.GUI
         {
             VerbDetail newDetailWindow = new VerbDetail(controlVerb);
             newDetailWindow.ShowDialog(this);
+            
+        }
+
+        private void lbInflections_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Inflection choice = (Inflection)lbInflections.SelectedItem;
+            // when item double clicked open InflectionEntry detail window
+            InflectionEntry entryWin = new InflectionEntry(choice);
+            entryWin.Show();
+        }
+
+        private void lbInflections_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lbInflections.SelectedIndex != -1)
+            {
+                lbTenses.Items.Clear();
+                Inflection chosen = (Inflection)lbInflections.SelectedItem;
+                // each inflection will have its own group of tenses so load those
+                foreach (Tense tense in chosen.Tenses)
+                {
+                    lbTenses.Items.Add(tense);
+                }
+            }
+        }
+
+        private void llKanjiCharacter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(tbRomaji.Text))
+            {
+                // open kanji frame
+                KanjiDetails kanj = new KanjiDetails(tbRomaji.Text.Trim(), imageAssembly, JapaneseLanguageWinForm.Properties.Resources.ImageLibraryDllShortName);
+                kanj.ShowDialog(this);
+            }
             
         }
     }

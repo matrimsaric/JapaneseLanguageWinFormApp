@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="KanjiLineMaps">
+      <HintPath>..\KanjiLineMaps\bin\Debug\net6.0\KanjiLineMaps.dll</HintPath>
+    </Reference>
     <Reference Include="LanguageConsult">
       <HintPath>..\LanguageConsult\bin\Debug\net6.0\LanguageConsult.dll</HintPath>
     </Reference>
