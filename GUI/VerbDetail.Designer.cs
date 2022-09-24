@@ -182,6 +182,7 @@
             this.Controls.Add(this.lKanji);
             this.Name = "VerbDetail";
             this.Text = "     ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

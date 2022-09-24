@@ -274,5 +274,36 @@ namespace JapaneseLanguageWinForm.GUI
             }
             
         }
+
+        private void SetKeyboardLayout(InputLanguage layout)
+        {
+            string lay = layout.Culture.EnglishName.ToString().ToUpperInvariant();
+            foreach (InputLanguage Lng in InputLanguage.InstalledInputLanguages)
+            {
+
+                if (Lng.Culture.EnglishName.ToUpperInvariant().StartsWith(lay))
+                {
+                    InputLanguage.CurrentInputLanguage = Lng;
+                    System.Threading.Thread.CurrentThread.CurrentCulture = layout.Culture;
+                }
+
+            }
+
+        }
+
+        private void tbJapaneseBoxEntered(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo japaneseCulture = new System.Globalization.CultureInfo("ja-JP");
+
+            SetKeyboardLayout(System.Windows.Forms.InputLanguage.FromCulture(japaneseCulture));
+        }
+
+        private void tbJEnglishBoxEntered(object sender, EventArgs e)
+        {
+            // TODO the Japanese is a given, this should be a setting so the language can match the users preference
+            System.Globalization.CultureInfo otherCulture = new System.Globalization.CultureInfo("en-GB");
+
+            SetKeyboardLayout(System.Windows.Forms.InputLanguage.FromCulture(otherCulture));
+        }
     }
 }

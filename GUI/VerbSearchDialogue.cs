@@ -60,5 +60,32 @@ namespace JapaneseLanguageWinForm.GUI
             chosenGuid = (Guid)row.Cells["VerbId"].Value;
             this.Close();
         }
+
+        private void dgvVerbs_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // select this row
+            this.DialogResult = DialogResult.OK;
+            DataGridViewRow row = this.dgvVerbs.Rows[dgvVerbs.SelectedRows[0].Index];
+
+            chosenGuid = (Guid)row.Cells["VerbId"].Value;
+            this.Close();
+        }
+
+        private void bFilterResults_Click(object sender, EventArgs e)
+        {
+            int verbChoice = 0;
+            if (rbIchidan.Checked == true) verbChoice = 1;
+            else if (rbGodan.Checked == true) verbChoice = 2;
+            else if (rbException.Checked == true) verbChoice = 3;
+
+
+
+            Task<DataTable> verbsToUse = DataControlSingleton.GetDataAccess().LoadFilteredVerbs(verbChoice, ddlFilterChoice.SelectedIndex, tbSearchText.Text);
+
+            if (verbsToUse.Result != null)
+            {
+                dgvVerbs.DataSource = verbsToUse.Result;
+            }
+        }
     }
 }

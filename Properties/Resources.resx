@@ -133,4 +133,10 @@
   <data name="ImageLibraryMethodName" xml:space="preserve">
     <value>GetPNGImage</value>
   </data>
+  <data name="ShowNotes" xml:space="preserve">
+    <value>false</value>
+  </data>
+  <data name="ShowRomaji" xml:space="preserve">
+    <value>false</value>
+  </data>
 </root>

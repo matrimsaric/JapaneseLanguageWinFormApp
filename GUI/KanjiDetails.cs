@@ -1,4 +1,4 @@
-﻿using KanjiLineMaps;
+﻿//using KanjiLineMaps;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +51,7 @@ namespace JapaneseLanguageWinForm.GUI
                 string requiredMethodName = JapaneseLanguageWinForm.Properties.Resources.ImageLibraryMethodName;
                 MethodInfo method = imgAccessClass.GetType().GetMethod(requiredMethodName);
 
-                if(method != null)
+                if (method != null)
                 {
                     string[] args = new string[1];
                     args[0] = displayedKanjiName;

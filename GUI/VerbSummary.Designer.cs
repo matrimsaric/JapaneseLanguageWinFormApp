@@ -71,6 +71,7 @@
             this.tbKanji.Size = new System.Drawing.Size(559, 78);
             this.tbKanji.TabIndex = 2;
             this.tbKanji.TextChanged += new System.EventHandler(this.tbEnableSave);
+            this.tbKanji.Enter += new System.EventHandler(this.tbJapaneseBoxEntered);
             // 
             // tbHiragana
             // 
@@ -81,6 +82,7 @@
             this.tbHiragana.Size = new System.Drawing.Size(559, 78);
             this.tbHiragana.TabIndex = 3;
             this.tbHiragana.TextChanged += new System.EventHandler(this.tbEnableSave);
+            this.tbHiragana.Enter += new System.EventHandler(this.tbJapaneseBoxEntered);
             // 
             // tbRomaji
             // 
@@ -91,6 +93,7 @@
             this.tbRomaji.Size = new System.Drawing.Size(559, 34);
             this.tbRomaji.TabIndex = 4;
             this.tbRomaji.TextChanged += new System.EventHandler(this.tbEnableSave);
+            this.tbRomaji.Enter += new System.EventHandler(this.tbJEnglishBoxEntered);
             // 
             // tbKanjiCharacter
             // 
@@ -102,6 +105,7 @@
             this.tbKanjiCharacter.Size = new System.Drawing.Size(502, 220);
             this.tbKanjiCharacter.TabIndex = 5;
             this.tbKanjiCharacter.TextChanged += new System.EventHandler(this.tbEnableSave);
+            this.tbKanjiCharacter.Enter += new System.EventHandler(this.tbJapaneseBoxEntered);
             // 
             // tbMeaning
             // 
@@ -111,6 +115,7 @@
             this.tbMeaning.Size = new System.Drawing.Size(1077, 27);
             this.tbMeaning.TabIndex = 6;
             this.tbMeaning.TextChanged += new System.EventHandler(this.tbEnableSave);
+            this.tbMeaning.Enter += new System.EventHandler(this.tbJEnglishBoxEntered);
             // 
             // label2
             // 
@@ -342,6 +347,7 @@
             this.Controls.Add(this.tbVerbId);
             this.Name = "VerbSummary";
             this.Text = "Verb Summary";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

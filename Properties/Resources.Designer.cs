@@ -104,5 +104,23 @@ namespace JapaneseLanguageWinForm.Properties {
                 return ResourceManager.GetString("ImageLibraryMethodName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to false.
+        /// </summary>
+        internal static string ShowNotes {
+            get {
+                return ResourceManager.GetString("ShowNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to false.
+        /// </summary>
+        internal static string ShowRomaji {
+            get {
+                return ResourceManager.GetString("ShowRomaji", resourceCulture);
+            }
+        }
     }
 }
