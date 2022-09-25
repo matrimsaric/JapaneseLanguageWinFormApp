@@ -129,20 +129,17 @@ namespace JapaneseLanguageWinForm.GUI
             }
         }
 
-        private void tbEnableSave(object sender, EventArgs e)
+        private bool EnableSave()
         {
             if(!string.IsNullOrEmpty(tbKanji.Text.Trim())
                 && !string.IsNullOrEmpty(tbHiragana.Text.Trim())
                 && !string.IsNullOrEmpty(tbRomaji.Text.Trim())
                 && !string.IsNullOrEmpty(tbMeaning.Text.Trim())
                 && !string.IsNullOrEmpty(tbKanjiCharacter.Text.Trim())){
-                bSave.Enabled = true;
-               
+                return true;
+
             }
-            else
-            {
-                bSave.Enabled = false;
-            }
+            return false;
         }
 
         private void bClear_Click(object sender, EventArgs e)
@@ -152,6 +149,10 @@ namespace JapaneseLanguageWinForm.GUI
 
         private void ClearAll()
         {
+            if (EnableSave() == false)
+            {
+                return;
+            }
             tbKanji.Text = String.Empty;
             tbHiragana.Text = String.Empty;
             tbKanjiCharacter.Text = String.Empty;
@@ -167,6 +168,10 @@ namespace JapaneseLanguageWinForm.GUI
 
         private void bSave_Click(object sender, EventArgs e)
         {
+            if(EnableSave() == false)
+            {
+                return;
+            }
             if(newVerb == true)
             {
                 Verb newCreation;

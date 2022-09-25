@@ -42,56 +42,71 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(907, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(794, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(432, 634);
+            this.pictureBox1.Size = new System.Drawing.Size(378, 476);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // bExit
             // 
             this.bExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bExit.Location = new System.Drawing.Point(1235, 766);
+            this.bExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bExit.ForeColor = System.Drawing.Color.White;
+            this.bExit.Location = new System.Drawing.Point(1081, 574);
+            this.bExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bExit.Name = "bExit";
-            this.bExit.Size = new System.Drawing.Size(94, 29);
+            this.bExit.Size = new System.Drawing.Size(82, 22);
             this.bExit.TabIndex = 1;
             this.bExit.Text = "Exit";
-            this.bExit.UseVisualStyleBackColor = true;
+            this.bExit.UseVisualStyleBackColor = false;
             this.bExit.Click += new System.EventHandler(this.bExit_Click);
             // 
             // bVerbSummary
             // 
             this.bVerbSummary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bVerbSummary.Location = new System.Drawing.Point(12, 12);
+            this.bVerbSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bVerbSummary.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bVerbSummary.ForeColor = System.Drawing.Color.White;
+            this.bVerbSummary.Location = new System.Drawing.Point(10, 9);
+            this.bVerbSummary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bVerbSummary.Name = "bVerbSummary";
-            this.bVerbSummary.Size = new System.Drawing.Size(880, 99);
+            this.bVerbSummary.Size = new System.Drawing.Size(770, 74);
             this.bVerbSummary.TabIndex = 2;
             this.bVerbSummary.Text = "Verb Summary";
-            this.bVerbSummary.UseVisualStyleBackColor = true;
+            this.bVerbSummary.UseVisualStyleBackColor = false;
             this.bVerbSummary.Click += new System.EventHandler(this.bVerbSummary_Click);
             // 
             // bVerbDetail
             // 
             this.bVerbDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bVerbDetail.Location = new System.Drawing.Point(12, 117);
+            this.bVerbDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bVerbDetail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bVerbDetail.ForeColor = System.Drawing.Color.White;
+            this.bVerbDetail.Location = new System.Drawing.Point(10, 88);
+            this.bVerbDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bVerbDetail.Name = "bVerbDetail";
-            this.bVerbDetail.Size = new System.Drawing.Size(880, 99);
+            this.bVerbDetail.Size = new System.Drawing.Size(770, 74);
             this.bVerbDetail.TabIndex = 3;
             this.bVerbDetail.Text = "Verb Detail";
-            this.bVerbDetail.UseVisualStyleBackColor = true;
+            this.bVerbDetail.UseVisualStyleBackColor = false;
             this.bVerbDetail.Click += new System.EventHandler(this.bVerbDetail_Click);
             // 
             // Startup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 807);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1182, 605);
             this.Controls.Add(this.bVerbDetail);
             this.Controls.Add(this.bVerbSummary);
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Startup";
             this.Text = "Japanese Language WinFormClient";
             this.Load += new System.EventHandler(this.Startup_Load);

@@ -36,12 +36,15 @@
             // bClose
             // 
             this.bClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bClose.ForeColor = System.Drawing.Color.White;
             this.bClose.Location = new System.Drawing.Point(1456, 324);
             this.bClose.Name = "bClose";
             this.bClose.Size = new System.Drawing.Size(75, 23);
             this.bClose.TabIndex = 0;
             this.bClose.Text = "Close";
-            this.bClose.UseVisualStyleBackColor = true;
+            this.bClose.UseVisualStyleBackColor = false;
             this.bClose.Click += new System.EventHandler(this.bClose_Click);
             // 
             // pbKanjiLines
@@ -61,6 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1543, 356);
             this.Controls.Add(this.pbKanjiLines);
             this.Controls.Add(this.bClose);

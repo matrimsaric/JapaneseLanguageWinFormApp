@@ -133,7 +133,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 128);
+            this.label7.Location = new System.Drawing.Point(32, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 15);
             this.label7.TabIndex = 7;
@@ -142,7 +142,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 164);
+            this.label8.Location = new System.Drawing.Point(33, 235);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 15);
             this.label8.TabIndex = 8;
@@ -151,7 +151,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 202);
+            this.label9.Location = new System.Drawing.Point(33, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 15);
             this.label9.TabIndex = 9;
@@ -160,7 +160,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 254);
+            this.label10.Location = new System.Drawing.Point(33, 263);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 15);
             this.label10.TabIndex = 10;
@@ -211,7 +211,7 @@
             // 
             this.tbTense4Kanji.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbTense4Kanji.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.tbTense4Kanji.Location = new System.Drawing.Point(946, 78);
+            this.tbTense4Kanji.Location = new System.Drawing.Point(945, 78);
             this.tbTense4Kanji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense4Kanji.MaxLength = 30;
             this.tbTense4Kanji.Name = "tbTense4Kanji";
@@ -225,7 +225,7 @@
             // 
             this.tbTense1Hiragana.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbTense1Hiragana.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.tbTense1Hiragana.Location = new System.Drawing.Point(143, 115);
+            this.tbTense1Hiragana.Location = new System.Drawing.Point(143, 118);
             this.tbTense1Hiragana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense1Hiragana.MaxLength = 30;
             this.tbTense1Hiragana.Name = "tbTense1Hiragana";
@@ -238,7 +238,7 @@
             // 
             this.tbTense2Hiragana.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbTense2Hiragana.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.tbTense2Hiragana.Location = new System.Drawing.Point(415, 115);
+            this.tbTense2Hiragana.Location = new System.Drawing.Point(415, 118);
             this.tbTense2Hiragana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense2Hiragana.MaxLength = 30;
             this.tbTense2Hiragana.Name = "tbTense2Hiragana";
@@ -250,7 +250,7 @@
             // 
             this.tbTense3Hiragana.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbTense3Hiragana.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.tbTense3Hiragana.Location = new System.Drawing.Point(687, 115);
+            this.tbTense3Hiragana.Location = new System.Drawing.Point(688, 118);
             this.tbTense3Hiragana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense3Hiragana.MaxLength = 30;
             this.tbTense3Hiragana.Name = "tbTense3Hiragana";
@@ -262,7 +262,7 @@
             // 
             this.tbTense4Hiragana.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbTense4Hiragana.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.tbTense4Hiragana.Location = new System.Drawing.Point(946, 115);
+            this.tbTense4Hiragana.Location = new System.Drawing.Point(945, 118);
             this.tbTense4Hiragana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense4Hiragana.MaxLength = 30;
             this.tbTense4Hiragana.Name = "tbTense4Hiragana";
@@ -273,7 +273,7 @@
             // tbTense1Romaji
             // 
             this.tbTense1Romaji.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense1Romaji.Location = new System.Drawing.Point(143, 151);
+            this.tbTense1Romaji.Location = new System.Drawing.Point(143, 222);
             this.tbTense1Romaji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense1Romaji.MaxLength = 30;
             this.tbTense1Romaji.Name = "tbTense1Romaji";
@@ -283,7 +283,7 @@
             // tbTense2Romaji
             // 
             this.tbTense2Romaji.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense2Romaji.Location = new System.Drawing.Point(415, 152);
+            this.tbTense2Romaji.Location = new System.Drawing.Point(416, 222);
             this.tbTense2Romaji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense2Romaji.MaxLength = 30;
             this.tbTense2Romaji.Name = "tbTense2Romaji";
@@ -293,7 +293,7 @@
             // tbTense3Romaji
             // 
             this.tbTense3Romaji.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense3Romaji.Location = new System.Drawing.Point(687, 152);
+            this.tbTense3Romaji.Location = new System.Drawing.Point(687, 222);
             this.tbTense3Romaji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense3Romaji.MaxLength = 30;
             this.tbTense3Romaji.Name = "tbTense3Romaji";
@@ -303,7 +303,7 @@
             // tbTense4Romaji
             // 
             this.tbTense4Romaji.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense4Romaji.Location = new System.Drawing.Point(946, 152);
+            this.tbTense4Romaji.Location = new System.Drawing.Point(945, 222);
             this.tbTense4Romaji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense4Romaji.MaxLength = 30;
             this.tbTense4Romaji.Name = "tbTense4Romaji";
@@ -312,7 +312,7 @@
             // 
             // tbNotes1
             // 
-            this.tbNotes1.Location = new System.Drawing.Point(143, 252);
+            this.tbNotes1.Location = new System.Drawing.Point(143, 262);
             this.tbNotes1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNotes1.MaxLength = 200;
             this.tbNotes1.Multiline = true;
@@ -323,7 +323,7 @@
             // tbTense1Meaning
             // 
             this.tbTense1Meaning.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense1Meaning.Location = new System.Drawing.Point(143, 189);
+            this.tbTense1Meaning.Location = new System.Drawing.Point(143, 158);
             this.tbTense1Meaning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense1Meaning.MaxLength = 50;
             this.tbTense1Meaning.Multiline = true;
@@ -335,7 +335,7 @@
             // tbTense2Meaning
             // 
             this.tbTense2Meaning.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense2Meaning.Location = new System.Drawing.Point(415, 189);
+            this.tbTense2Meaning.Location = new System.Drawing.Point(415, 158);
             this.tbTense2Meaning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense2Meaning.MaxLength = 50;
             this.tbTense2Meaning.Multiline = true;
@@ -346,7 +346,7 @@
             // tbTense3Meaning
             // 
             this.tbTense3Meaning.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense3Meaning.Location = new System.Drawing.Point(687, 188);
+            this.tbTense3Meaning.Location = new System.Drawing.Point(687, 158);
             this.tbTense3Meaning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense3Meaning.MaxLength = 50;
             this.tbTense3Meaning.Multiline = true;
@@ -357,7 +357,7 @@
             // tbTense4Meaning
             // 
             this.tbTense4Meaning.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbTense4Meaning.Location = new System.Drawing.Point(946, 188);
+            this.tbTense4Meaning.Location = new System.Drawing.Point(945, 158);
             this.tbTense4Meaning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTense4Meaning.MaxLength = 50;
             this.tbTense4Meaning.Multiline = true;
@@ -367,29 +367,35 @@
             // 
             // bClose
             // 
+            this.bClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bClose.ForeColor = System.Drawing.Color.White;
             this.bClose.Location = new System.Drawing.Point(1168, 358);
             this.bClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bClose.Name = "bClose";
             this.bClose.Size = new System.Drawing.Size(82, 22);
             this.bClose.TabIndex = 21;
             this.bClose.Text = "Close";
-            this.bClose.UseVisualStyleBackColor = true;
+            this.bClose.UseVisualStyleBackColor = false;
             this.bClose.Click += new System.EventHandler(this.bClose_Click);
             // 
             // bSave
             // 
+            this.bSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bSave.ForeColor = System.Drawing.Color.White;
             this.bSave.Location = new System.Drawing.Point(1081, 358);
             this.bSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(82, 22);
             this.bSave.TabIndex = 20;
             this.bSave.Text = "Save";
-            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.UseVisualStyleBackColor = false;
             this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
             // tbNotes2
             // 
-            this.tbNotes2.Location = new System.Drawing.Point(415, 252);
+            this.tbNotes2.Location = new System.Drawing.Point(416, 262);
             this.tbNotes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNotes2.MaxLength = 200;
             this.tbNotes2.Multiline = true;
@@ -399,7 +405,7 @@
             // 
             // tbNotes3
             // 
-            this.tbNotes3.Location = new System.Drawing.Point(687, 254);
+            this.tbNotes3.Location = new System.Drawing.Point(687, 263);
             this.tbNotes3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNotes3.MaxLength = 200;
             this.tbNotes3.Multiline = true;
@@ -409,7 +415,7 @@
             // 
             // tbNotes4
             // 
-            this.tbNotes4.Location = new System.Drawing.Point(946, 254);
+            this.tbNotes4.Location = new System.Drawing.Point(945, 262);
             this.tbNotes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNotes4.MaxLength = 200;
             this.tbNotes4.Multiline = true;
@@ -420,7 +426,7 @@
             // cbHideNotes
             // 
             this.cbHideNotes.AutoSize = true;
-            this.cbHideNotes.Location = new System.Drawing.Point(152, 349);
+            this.cbHideNotes.Location = new System.Drawing.Point(143, 358);
             this.cbHideNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbHideNotes.Name = "cbHideNotes";
             this.cbHideNotes.Size = new System.Drawing.Size(85, 19);
@@ -432,7 +438,7 @@
             // cbHideRomaji
             // 
             this.cbHideRomaji.AutoSize = true;
-            this.cbHideRomaji.Location = new System.Drawing.Point(264, 349);
+            this.cbHideRomaji.Location = new System.Drawing.Point(244, 358);
             this.cbHideRomaji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbHideRomaji.Name = "cbHideRomaji";
             this.cbHideRomaji.Size = new System.Drawing.Size(91, 19);
@@ -446,7 +452,7 @@
             this.cbAutoHirgana.AutoSize = true;
             this.cbAutoHirgana.Checked = true;
             this.cbAutoHirgana.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAutoHirgana.Location = new System.Drawing.Point(370, 349);
+            this.cbAutoHirgana.Location = new System.Drawing.Point(352, 358);
             this.cbAutoHirgana.Name = "cbAutoHirgana";
             this.cbAutoHirgana.Size = new System.Drawing.Size(153, 19);
             this.cbAutoHirgana.TabIndex = 24;
@@ -458,6 +464,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1261, 389);
             this.Controls.Add(this.cbAutoHirgana);
             this.Controls.Add(this.cbHideRomaji);

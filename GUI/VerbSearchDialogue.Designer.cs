@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rbIchidan = new System.Windows.Forms.RadioButton();
             this.rbGodan = new System.Windows.Forms.RadioButton();
             this.rbException = new System.Windows.Forms.RadioButton();
@@ -118,8 +118,8 @@
             // 
             // dgvVerbs
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            this.dgvVerbs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvVerbs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVerbs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -142,41 +142,51 @@
             // bCancel
             // 
             this.bCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bCancel.ForeColor = System.Drawing.Color.White;
             this.bCancel.Location = new System.Drawing.Point(713, 415);
             this.bCancel.Name = "bCancel";
             this.bCancel.Size = new System.Drawing.Size(75, 23);
             this.bCancel.TabIndex = 8;
             this.bCancel.Text = "Cancel";
-            this.bCancel.UseVisualStyleBackColor = true;
+            this.bCancel.UseVisualStyleBackColor = false;
             this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
             // bAccept
             // 
             this.bAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.bAccept.Enabled = false;
+            this.bAccept.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bAccept.ForeColor = System.Drawing.Color.White;
             this.bAccept.Location = new System.Drawing.Point(632, 415);
             this.bAccept.Name = "bAccept";
             this.bAccept.Size = new System.Drawing.Size(75, 23);
             this.bAccept.TabIndex = 9;
             this.bAccept.Text = "Select";
-            this.bAccept.UseVisualStyleBackColor = true;
+            this.bAccept.UseVisualStyleBackColor = false;
             this.bAccept.Click += new System.EventHandler(this.bAccept_Click);
             // 
             // bFilterResults
             // 
+            this.bFilterResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bFilterResults.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bFilterResults.ForeColor = System.Drawing.Color.White;
             this.bFilterResults.Location = new System.Drawing.Point(658, 47);
             this.bFilterResults.Name = "bFilterResults";
             this.bFilterResults.Size = new System.Drawing.Size(130, 23);
             this.bFilterResults.TabIndex = 10;
             this.bFilterResults.TabStop = false;
             this.bFilterResults.Text = "Filter Results";
-            this.bFilterResults.UseVisualStyleBackColor = true;
+            this.bFilterResults.UseVisualStyleBackColor = false;
             this.bFilterResults.Click += new System.EventHandler(this.bFilterResults_Click);
             // 
             // VerbSearchDialogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bFilterResults);
             this.Controls.Add(this.bAccept);
