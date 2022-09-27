@@ -97,7 +97,13 @@ namespace JapaneseLanguageWinForm.GUI
             
         }
 
-        
+        private void tbRomaji_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
         private void bClose_Click(object sender, EventArgs e)
         {

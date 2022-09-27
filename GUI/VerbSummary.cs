@@ -310,5 +310,13 @@ namespace JapaneseLanguageWinForm.GUI
 
             SetKeyboardLayout(System.Windows.Forms.InputLanguage.FromCulture(otherCulture));
         }
+
+        private void tbRomaji_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
