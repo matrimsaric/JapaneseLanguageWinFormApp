@@ -315,7 +315,16 @@ namespace JapaneseLanguageWinForm.GUI
         {
             if (!Char.IsLetterOrDigit(e.KeyChar))
             {
-                e.Handled = true;
+                if (Char.IsControl(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+                {
+
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+
+                
             }
         }
     }

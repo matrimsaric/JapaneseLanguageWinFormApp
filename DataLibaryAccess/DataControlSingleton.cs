@@ -23,7 +23,7 @@ namespace JapaneseLanguageWinForm.DataLibaryAccess
         private static void GenerateDataAccess()
         {
             DataAccessProvider prov = new DataAccessProvider();
-            dataAccessLayer = prov.GetLiveDataAccess();
+            dataAccessLayer = prov.GetLiveDataAccess(userChoice: ACCESS_CHOICE.DATA_IO);
         }
 
     }
